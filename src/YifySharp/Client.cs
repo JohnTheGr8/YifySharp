@@ -1,5 +1,6 @@
 ﻿using RestSharp;
 using YifySharp.Models;
+using YifySharp.Extensions;
 
 namespace YifySharp
 {
@@ -7,18 +8,19 @@ namespace YifySharp
     {
         private readonly string urlFormat = "https://yts.re/api/v2/{0}.json";
 
-        public MovieList GetMovieList(int limit = 20, int page = 1, string quality = "All", int? minimum_rating = 0, string query_term = "0", string genre = "All", string sort_by = "date_added", string order_by = "desc")
+        public MovieList GetMovieList(int limit = 20, int page = 1, MovieQuality quality = MovieQuality.All, int? minimumRating = 0, string queryTerm = "0", 
+            string genre = "All", MovieSortOption sortBy = MovieSortOption.DateAdded, MovieOrderOption orderBy = MovieOrderOption.Descending)
         {
             var request = new RestRequest(Method.GET);
 
             request.AddParameter("limit", limit);
             request.AddParameter("page", page);
-            request.AddParameter("quality", quality);
-            request.AddParameter("minimum_rating", minimum_rating);
-            request.AddParameter("query_term", query_term);
+            request.AddParameter("quality", quality.GetDescription());
+            request.AddParameter("minimum_rating", minimumRating);
+            request.AddParameter("query_term", queryTerm);
             request.AddParameter("genre", genre);
-            request.AddParameter("sort_by", sort_by);
-            request.AddParameter("order_by", order_by);
+            request.AddParameter("sort_by", sortBy.GetDescription());
+            request.AddParameter("order_by", orderBy.GetDescription());
 
             return Execute<MovieList>(request, "list_movies").Data;
         }

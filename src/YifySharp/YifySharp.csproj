@@ -46,12 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Models\ImageInfo.cs" />
     <Compile Include="Models\MovieComments.cs" />
     <Compile Include="Models\MovieDetails.cs" />
     <Compile Include="Models\MovieInfo.cs" />
+    <Compile Include="Models\MovieInfoBase.cs" />
     <Compile Include="Models\MovieList.cs" />
+    <Compile Include="Models\MovieOrderOption.cs" />
+    <Compile Include="Models\MovieQuality.cs" />
     <Compile Include="Models\MovieReviews.cs" />
+    <Compile Include="Models\MovieSortOption.cs" />
     <Compile Include="Models\ParentalGuideInfo.cs" />
     <Compile Include="Models\SuggestionList.cs" />
     <Compile Include="Models\UpcomingList.cs" />
