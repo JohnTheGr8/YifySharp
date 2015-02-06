@@ -5,18 +5,59 @@ namespace YifySharp.Models
 {
     public class TorrentInfo
     {
+        /// <summary>
+        /// Link to the .torrent file
+        /// </summary>
         public string Url { get; set; }
+
+        /// <summary>
+        /// Torrent's hash
+        /// </summary>
         public string Hash { get; set; }
+
+        /// <summary>
+        /// Movie quality, will either be 720p, 1080p or 3D
+        /// </summary>
         public string Quality { get; set; }
+
+        /// <summary>
+        /// Number of seeders for this torrent
+        /// </summary>
         public int Seeds { get; set; }
+
+        /// <summary>
+        /// Number of leechers for this torrent
+        /// </summary>
         public int Peers { get; set; }
+
+        /// <summary>
+        /// Torrent size in string format
+        /// </summary>
         public string Size { get; set; }
+
+        /// <summary>
+        /// Torrent size in bytes
+        /// </summary>
         public int SizeBytes { get; set; }
+
+        /// <summary>
+        /// The date this torrent was uploaded
+        /// </summary>
         public DateTime DateUploaded { get; set; }
+
+        /// <summary>
+        /// The date this torrent was uploaded, in epoch format
+        /// </summary>
         public int DateUploadedUnix { get; set; }
 
+        /// <summary>
+        /// movie title, used to construct the magnet url
+        /// </summary>
         internal string MovieTitle;
 
+        /// <summary>
+        /// Constructs and returns a magnet url for this torrent
+        /// </summary>
         public string MagnetUrl
         {
             get

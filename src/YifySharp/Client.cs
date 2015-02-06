@@ -79,11 +79,11 @@ namespace YifySharp
             return Execute<UpcomingList>(request, "list_upcoming").Data;
         }
 
-        public UserDetails GetUserDetails(int user_id)
+        public UserDetails GetUserDetails(int userId)
         {
             var request = new RestRequest(Method.GET);
 
-            request.AddParameter("user_id", user_id);
+            request.AddParameter("user_id", userId);
 
             return Execute<UserDetails>(request, "user_details").Data;
         }

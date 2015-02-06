@@ -6,12 +6,19 @@ namespace YifySharp.Models
     {
         public int ParentalGuideCount { get; set; }
 
-        public List<Guide> ParentalGuides { get; set; }
+        public List<ParentalGuide> ParentalGuides { get; set; }
     }
 
-    public class Guide
+    public class ParentalGuide
     {
+        /// <summary>
+        /// Type of parental guide (violence, nudity etc)
+        /// </summary>
         public string Type { get; set; }
+
+        /// <summary>
+        /// Guide description
+        /// </summary>
         public string ParentalGuideText { get; set; }
     }
 }
