@@ -59,6 +59,7 @@
     <Compile Include="Models\MovieSortOption.cs" />
     <Compile Include="Models\ParentalGuideInfo.cs" />
     <Compile Include="Models\SuggestionList.cs" />
+    <Compile Include="Models\TorrentInfo.cs" />
     <Compile Include="Models\UpcomingList.cs" />
     <Compile Include="Models\UpcomingMovieInfo.cs" />
     <Compile Include="Models\UserDetails.cs" />
