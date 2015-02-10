@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using System;
+using RestSharp;
 using YifySharp.Models;
 using YifySharp.Extensions;
 
@@ -8,7 +9,7 @@ namespace YifySharp
     {
         private readonly string urlFormat = "https://yts.re/api/v2/{0}.json";
 
-        public MovieList GetMovieList(int limit = 20, int page = 1, MovieQuality quality = MovieQuality.All, int? minimumRating = 0, string queryTerm = "0", 
+        public MovieList GetMovieList(string queryTerm = null, int limit = 20, int page = 1, MovieQuality quality = MovieQuality.All, int minimumRating = 0, 
             string genre = "All", MovieSortOption sortBy = MovieSortOption.DateAdded, MovieOrderOption orderBy = MovieOrderOption.Descending)
         {
             var request = new RestRequest(Method.GET);
@@ -17,7 +18,7 @@ namespace YifySharp
             request.AddParameter("page", page);
             request.AddParameter("quality", quality.GetDescription());
             request.AddParameter("minimum_rating", minimumRating);
-            request.AddParameter("query_term", queryTerm);
+            request.AddParameter("query_term", queryTerm ?? "0");
             request.AddParameter("genre", genre);
             request.AddParameter("sort_by", sortBy.GetDescription());
             request.AddParameter("order_by", orderBy.GetDescription());
@@ -30,10 +31,17 @@ namespace YifySharp
             var request = new RestRequest(Method.GET);
 
             request.AddParameter("movie_id", movieId);
-            request.AddParameter("with_images", withImages.ToString());
-            request.AddParameter("with_cast", "false");
+            if (withImages)
+                request.AddParameter("with_images", "true");
+            if(withCast)
+                request.AddParameter("with_cast", "true");
 
             return Execute<MovieDetails>(request, "movie_details").Data;
+        }
+
+        public MovieDetails GetMovieDetails(MovieInfoBase movie, bool withImages = false, bool withCast = false)
+        {
+            return GetMovieDetails(movie.Id);
         }
 
         public SuggestionList GetMovieSuggestions(int movieId)
@@ -45,6 +53,11 @@ namespace YifySharp
             return Execute<SuggestionList>(request, "movie_suggestions").Data;
         }
 
+        public SuggestionList GetMovieSuggestions(MovieInfoBase movie)
+        {
+            return GetMovieSuggestions(movie.Id);
+        }
+
         public MovieComments GetMovieComments(int movieId)
         {
             var request = new RestRequest(Method.GET);
@@ -52,6 +65,11 @@ namespace YifySharp
             request.AddParameter("movie_id", movieId);
 
             return Execute<MovieComments>(request, "movie_comments").Data;
+        }
+
+        public MovieComments GetMovieComments(MovieInfoBase movie)
+        {
+            return GetMovieComments(movie.Id);
         }
 
         public MovieReviews GetReviews(int movieId)
@@ -63,6 +81,11 @@ namespace YifySharp
             return Execute<MovieReviews>(request, "movie_reviews").Data;
         }
 
+        public MovieReviews GetReviews(MovieInfoBase movie)
+        {
+            return GetReviews(movie.Id);
+        }
+
         public ParentalGuideInfo GetParentalGuides(int movieId)
         {
             var request = new RestRequest(Method.GET);
@@ -70,6 +93,11 @@ namespace YifySharp
             request.AddParameter("movie_id", movieId);
 
             return Execute<ParentalGuideInfo>(request, "movie_parental_guides").Data;
+        }
+
+        public ParentalGuideInfo GetParentalGuides(MovieInfoBase movie)
+        {
+            return GetParentalGuides(movie.Id);
         }
 
         public UpcomingList GetUpcomingList()
