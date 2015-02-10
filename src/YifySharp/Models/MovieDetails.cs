@@ -50,9 +50,9 @@ namespace YifySharp.Models
         public string YtTrailerCode { get; set; }
 
         /// <summary>
-        /// List of movie-related artwork
+        /// Movie-related artwork
         /// </summary>
-        public List<ImageInfo> Images { get; set; }
+        public ImageInfo Images { get; set; }
 
         /// <summary>
         /// List of movie's directors
