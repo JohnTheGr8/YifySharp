@@ -42,7 +42,7 @@ namespace YifySharp.Models
         /// <summary>
         /// The date the user registered
         /// </summary>
-        public string DateJoined { get; set; }
+        public DateTime DateJoined { get; set; }
 
         /// <summary>
         /// The date the user registered, in epoch format
