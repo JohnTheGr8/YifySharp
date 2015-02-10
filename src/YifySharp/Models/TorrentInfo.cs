@@ -21,6 +21,16 @@ namespace YifySharp.Models
         public string Quality { get; set; }
 
         /// <summary>
+        /// The resolution of the movie in format W*H
+        /// </summary>
+        public string Resolution { get; set; }
+
+        /// <summary>
+        /// The framerate (FPS) of the movie
+        /// </summary>
+        public double FrameRate { get; set; }
+
+        /// <summary>
         /// Number of seeders for this torrent
         /// </summary>
         public int Seeds { get; set; }
@@ -39,6 +49,11 @@ namespace YifySharp.Models
         /// Torrent size in bytes
         /// </summary>
         public int SizeBytes { get; set; }
+
+        /// <summary>
+        /// Movie's download count
+        /// </summary>
+        public int DownloadCount { get; set; }
 
         /// <summary>
         /// The date this torrent was uploaded

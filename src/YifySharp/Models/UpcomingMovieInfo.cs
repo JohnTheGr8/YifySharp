@@ -27,11 +27,11 @@ namespace YifySharp.Models
         /// <summary>
         /// The date the movie was added
         /// </summary>
-        public DateTime DateAddedd { get; set; }
+        public DateTime DateAdded { get; set; }
 
         /// <summary>
         /// The date the movie was added, in epoch format
         /// </summary>
-        public int DateAddeddUnix { get; set; }
+        public int DateAddedUnix { get; set; }
     }
 }

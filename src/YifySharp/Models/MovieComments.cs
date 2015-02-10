@@ -13,6 +13,11 @@ namespace YifySharp.Models
     public class CommentInfo
     {
         /// <summary>
+        /// The comment's id
+        /// </summary>
+        public int CommentId { get; set; }
+
+        /// <summary>
         /// The commenter's user id
         /// </summary>
         public int UserId { get; set; }
