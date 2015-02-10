@@ -123,6 +123,11 @@ namespace YifySharp
 
             var response = client.Execute<YifyResponse<T>>(request);
 
+            if (response.ErrorException != null)
+                throw new ApplicationException(response.ErrorMessage, response.ErrorException);
+            if (response.Data.Status == "error")
+                throw new ApplicationException(response.Data.StatusMessage);
+
             return response.Data;
         }
     }
