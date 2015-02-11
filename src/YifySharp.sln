@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0CDA6F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YifySharp.Tests", "YifySharp.Tests\YifySharp.Tests.csproj", "{D8019127-5AF8-447A-82EF-072A775C0FBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{65A310B8-E7F2-4656-AECC-6FCA207361FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65A310B8-E7F2-4656-AECC-6FCA207361FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65A310B8-E7F2-4656-AECC-6FCA207361FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8019127-5AF8-447A-82EF-072A775C0FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8019127-5AF8-447A-82EF-072A775C0FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8019127-5AF8-447A-82EF-072A775C0FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8019127-5AF8-447A-82EF-072A775C0FBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
