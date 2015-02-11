@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/JohnTheGr8/YifySharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/JohnTheGr8/YifySharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>first release with all calls that do not require authentication</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>yify yts yts.re api wrapper</tags>
+  </metadata>
+</package>

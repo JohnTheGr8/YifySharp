@@ -1,9 +1,14 @@
-## YifySharp
-[![Build status](https://ci.appveyor.com/api/projects/status/rcm8k205k9o9joga?svg=true)](https://ci.appveyor.com/project/JohnTheGr8/yifysharp)
+## YifySharp [![AppVeyor](https://img.shields.io/appveyor/ci/JohnTheGr8/yifysharp.svg?style=flat-square)](https://ci.appveyor.com/project/JohnTheGr8/yifysharp) [![NuGet](https://img.shields.io/nuget/v/YifySharp.svg?style=flat-square)](https://www.nuget.org/packages/YifySharp/)
 
 #### About
 
 A .NET implementation of the [YIFY API](https://yts.re/api/).
+
+#### Install
+
+```powershell
+	PM> Install-Package YifySharp
+```
 
 #### Supported API calls
 
