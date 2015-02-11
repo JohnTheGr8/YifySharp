@@ -64,6 +64,7 @@
     <Compile Include="TestMovieReviews.cs" />
     <Compile Include="TestMovieSuggestions.cs" />
     <Compile Include="TestMovieList.cs" />
+    <Compile Include="TestInvalidParameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
