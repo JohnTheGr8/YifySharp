@@ -45,6 +45,6 @@ namespace YifySharp.Models
         /// <summary>
         /// The date this review was submitted, in epoch format
         /// </summary>
-        public int DateWrittenUnix { get; set; }
+        public uint DateWrittenUnix { get; set; }
     }
 }

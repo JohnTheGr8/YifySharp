@@ -28,17 +28,17 @@ namespace YifySharp.Models
         /// <summary>
         /// The framerate (FPS) of the movie
         /// </summary>
-        public double FrameRate { get; set; }
+        public double? FrameRate { get; set; }
 
         /// <summary>
         /// Number of seeders for this torrent
         /// </summary>
-        public int Seeds { get; set; }
+        public uint Seeds { get; set; }
 
         /// <summary>
         /// Number of leechers for this torrent
         /// </summary>
-        public int Peers { get; set; }
+        public uint Peers { get; set; }
 
         /// <summary>
         /// Torrent size in string format
@@ -48,12 +48,12 @@ namespace YifySharp.Models
         /// <summary>
         /// Torrent size in bytes
         /// </summary>
-        public int SizeBytes { get; set; }
+        public uint SizeBytes { get; set; }
 
         /// <summary>
         /// Movie's download count
         /// </summary>
-        public int DownloadCount { get; set; }
+        public uint? DownloadCount { get; set; }
 
         /// <summary>
         /// The date this torrent was uploaded
@@ -63,7 +63,7 @@ namespace YifySharp.Models
         /// <summary>
         /// The date this torrent was uploaded, in epoch format
         /// </summary>
-        public int DateUploadedUnix { get; set; }
+        public uint DateUploadedUnix { get; set; }
 
         /// <summary>
         /// movie title, used to construct the magnet url

@@ -37,7 +37,7 @@ namespace YifySharp
         /// <param name="movieId">the movie's id to look up</param>
         /// <param name="withImages">if true, movie-related artwork will be included</param>
         /// <param name="withCast">if true, actor/director information will be included</param>
-        public MovieDetails GetMovieDetails(int movieId, bool withImages = false, bool withCast = false)
+        public MovieDetails GetMovieDetails(uint movieId, bool withImages = false, bool withCast = false)
         {
             var request = new RestRequest(Method.GET);
 
@@ -64,7 +64,7 @@ namespace YifySharp
         /// <summary>
         /// Returns a list of 4 movies related to the specified movie
         /// </summary>
-        public SuggestionList GetMovieSuggestions(int movieId)
+        public SuggestionList GetMovieSuggestions(uint movieId)
         {
             var request = new RestRequest(Method.GET);
 
@@ -84,7 +84,7 @@ namespace YifySharp
         /// <summary>
         /// Returns all the comments for the specified movie
         /// </summary>
-        public MovieComments GetMovieComments(int movieId)
+        public MovieComments GetMovieComments(uint movieId)
         {
             var request = new RestRequest(Method.GET);
 
@@ -104,7 +104,7 @@ namespace YifySharp
         /// <summary>
         /// Returns all the IMDb movie reviews for the specified movie
         /// </summary>
-        public MovieReviews GetReviews(int movieId)
+        public MovieReviews GetReviews(uint movieId)
         {
             var request = new RestRequest(Method.GET);
 
@@ -124,7 +124,7 @@ namespace YifySharp
         /// <summary>
         /// Returns all the parental guide ratings for the specified movie
         /// </summary>
-        public ParentalGuideInfo GetParentalGuides(int movieId)
+        public ParentalGuideInfo GetParentalGuides(uint movieId)
         {
             var request = new RestRequest(Method.GET);
 
@@ -155,7 +155,7 @@ namespace YifySharp
         /// Returns profile information for the specified user
         /// </summary>
         /// <param name="userId">The ID of the user to look up</param>
-        public UserDetails GetUserDetails(int userId)
+        public UserDetails GetUserDetails(uint userId)
         {
             var request = new RestRequest(Method.GET);
 

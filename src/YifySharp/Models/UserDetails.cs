@@ -7,7 +7,7 @@ namespace YifySharp.Models
         /// <summary>
         /// User identification number
         /// </summary>
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         /// <summary>
         /// User's username
@@ -47,7 +47,7 @@ namespace YifySharp.Models
         /// <summary>
         /// The date the user registered, in epoch format
         /// </summary>
-        public int DateJoinedUnix { get; set; }
+        public uint DateJoinedUnix { get; set; }
 
         /// <summary>
         /// The date the user was last seen online
@@ -57,6 +57,6 @@ namespace YifySharp.Models
         /// <summary>
         /// The date the user was last seen online, in epoch format
         /// </summary>
-        public int DateLastSeenUnix { get; set; }
+        public uint DateLastSeenUnix { get; set; }
     }
 }

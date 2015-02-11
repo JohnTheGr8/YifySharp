@@ -15,12 +15,12 @@ namespace YifySharp.Models
         /// <summary>
         /// The comment's id
         /// </summary>
-        public int CommentId { get; set; }
+        public uint CommentId { get; set; }
 
         /// <summary>
         /// The commenter's user id
         /// </summary>
-        public int UserId { get; set; }
+        public uint UserId { get; set; }
 
         /// <summary>
         /// The commenter's username
@@ -50,7 +50,7 @@ namespace YifySharp.Models
         /// <summary>
         /// Number of likes for this particular comment
         /// </summary>
-        public int LikeCount { get; set; }
+        public uint LikeCount { get; set; }
 
         /// <summary>
         /// The body of the comment
@@ -65,6 +65,6 @@ namespace YifySharp.Models
         /// <summary>
         /// The date this comment was submitted, in epoch format
         /// </summary>
-        public int DateAddedUnix { get; set; }
+        public uint DateAddedUnix { get; set; }
     }
 }

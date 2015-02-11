@@ -9,7 +9,7 @@ namespace YifySharp.Models
         /// <summary>
         /// Movie identifier number
         /// </summary>
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         /// <summary>
         /// Link to the movie page on yts.re
@@ -69,7 +69,7 @@ namespace YifySharp.Models
         /// <summary>
         /// Date uploaded to YIFY (in epoch format)
         /// </summary>
-        public int DateUploadedUnix { get; set; }
+        public uint DateUploadedUnix { get; set; }
 
         /// <summary>
         /// Get link to the movie's imdb page

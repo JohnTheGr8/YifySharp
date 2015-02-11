@@ -7,12 +7,12 @@ namespace YifySharp.Models
         /// <summary>
         /// Movie download count
         /// </summary>
-        public int DownloadCount { get; set; }
+        public uint DownloadCount { get; set; }
 
         /// <summary>
         /// Movie like count
         /// </summary>
-        public int LikeCount { get; set; }
+        public uint LikeCount { get; set; }
         
         /// <summary>
         /// Movie's critics score on RottenTomatoes
