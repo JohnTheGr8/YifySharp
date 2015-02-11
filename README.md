@@ -1,4 +1,5 @@
 ## YifySharp
+[![Build status](https://ci.appveyor.com/api/projects/status/rcm8k205k9o9joga?svg=true)](https://ci.appveyor.com/project/JohnTheGr8/yifysharp)
 
 #### About
 
