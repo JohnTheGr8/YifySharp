@@ -93,7 +93,7 @@ namespace YifySharp.Models
             {
                 // When setting the torrent list, pass the Movie Title to each one
                 _torrents = value;
-                _torrents.ToList().ForEach(x => x.MovieTitle = TitleLong);
+                _torrents.ForEach(x => x.MovieTitle = TitleLong);
             }
         }
     }
