@@ -58,7 +58,7 @@ namespace YifySharp
         /// <param name="withCast">if true, actor/director information will be included</param>
         public MovieDetails GetMovieDetails(MovieInfoBase movie, bool withImages = false, bool withCast = false)
         {
-            return GetMovieDetails(movie.Id);
+            return GetMovieDetails(movie.Id, withImages, withCast);
         }
 
         /// <summary>
