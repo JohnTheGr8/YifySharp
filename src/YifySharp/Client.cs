@@ -7,7 +7,7 @@ namespace YifySharp
 {
     public class YifyClient
     {
-        private const string urlFormat = "https://yts.re/api/v2/{0}.json";
+        private const string urlFormat = "https://yts.to/api/v2/{0}.json";
 
         /// <summary>
         /// Returns a list of movies that match the given filters. If queryTerm is not set, a list of the latest torrents is returned.

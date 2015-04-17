@@ -15,7 +15,7 @@ namespace YifySharp.Tests
             Assert.AreEqual(details.Id, 16);
             Assert.AreEqual(details.Username, "YIFY");
             Assert.AreEqual(details.Group, "administrator");
-            Assert.AreEqual(details.Url, "https://yts.re/user/yify");
+            Assert.AreEqual(details.Url, "https://yts.to/user/yify");
             Assert.Greater(details.AboutText.Length, 0);
             Assert.IsNotNullOrEmpty(details.SmallAvatarImage);
             Assert.IsNotNullOrEmpty(details.MediumAvatarImage);
